@@ -1,9 +1,9 @@
 name: Flutter Nightly Build
 
 on:
-  schedule:
+#  schedule:
     # schedule build every night
-    - cron: "0 0 * * *"
+#    - cron: "0 0 * * *"
   workflow_dispatch:
 
 jobs:
@@ -11,5 +11,5 @@ jobs:
     uses: ./.github/workflows/flutter-build.yml
     secrets: inherit
     with:
-      upload-artifact: true
+      upload-artifact: false
       upload-tag: "nightly"
